@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <style>
+        body {
+            background-image: url(imagens/portfolio/emManutencao.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+
+        .title,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Open Sans, Helvetica Neue, Arial, sans-serif;
+            font-weight: 700
+        }
+
+        p {
+            font: 16px/180% Helvetica Neue, Helvetica, Arial, sans-serif
+        }
+
+        .js.menu-opened {
+            overflow: hidden
+        }
+
+        .js.menu-opened:after {
+            content: "";
+            display: block;
+            position: fixed;
+            top: 50px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, .5);
+        }
+
+        .header-nav {
+            background-color: #84b8af
+        }
+
+        .js .header-nav {
+            height: 50px
+        }
+
+        .js .header-nav .container {
+            height: 100%
+        }
+
+        .header-nav__logo {
+            display: inline-block;
+            max-width: 350px;
+            height: 50px;
+            position: relative;
+            top: 10px;
+            z-index: 20
+        }
+
+        .header-nav__logo img {
+            max-width: 100%;
+            height: 100%
+        }
+
+        .header-nav__hamburgger {
+            display: none
+        }
+
+        .js .header-nav__hamburgger {
+            display: inline-block;
+            height: 100%;
+            border: none;
+            background: transparent;
+            color: #fff;
+            font-size: 2em;
+            padding: 0 .5em
+        }
+
+        .js .header-nav__hamburgger:focus,
+        .js .header-nav__hamburgger:hover {
+            background: #74aea5
+        }
+
+        @media screen and (min-width:680px) {
+            .js .header-nav__hamburgger {
+                display: none
+            }
+        }
+
+        .header-nav__menu {
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+
+        .header-nav__menu a {
+            color: #fff;
+            display: block;
+            font-size: 1.5em;
+            border-top: 1px solid #58988d;
+            padding: 1em
+        }
+
+        .header-nav__menu a:hover {
+            background: #5c9e93
+        }
+
+        @media screen and (max-width:680px) {
+            .js .header-nav__menu {
+                background: #4f877e;
+                position: fixed;
+                z-index: 10;
+                top: 50px;
+                left: -100%;
+                width: 80%;
+                bottom: 0;
+                transition: left .3s ease-out
+            }
+        }
+
+        .menu-opened .header-nav__menu {
+            display: block
+        }
+
+        @media screen and (max-width:680px) {
+            .menu-opened .header-nav__menu {
+                left: 0
+            }
+        }
+
+        @media screen and (min-width:680px) {
+            .header-nav__menu {
+                float: right;
+                height: 50px
+            }
+
+            .header-nav__menu,
+            .header-nav__menu li {
+                display: inline-block
+            }
+
+            .header-nav__menu li a {
+                border-top: none;
+                transition: all .3s ease-in-out;
+                padding: 15px
+            }
+
+            .header-nav__menu li a:hover {
+                -webkit-transform: translateY(.5em);
+                transform: translateY(.5em);
+                box-shadow: 0 5px 15px -10px #000
+            }
+        }
+
+        .header-animado {
+            background-color: #64a59a;
+            padding-top: 96px;
+            margin-bottom: 32px;
+            padding-bottom: 0
+        }
+
+        .header-animado .header-animado__title {
+            font-family: Open Sans, Helvetica Neue, Arial, sans-serif;
+            color: #00151a;
+            font-size: 38px;
+            font-weight: 700
+        }
+
+        .header-animado .header-animado__subtitle {
+            font-family: Open Sans, Helvetica Neue, Arial, sans-serif;
+            color: #fff;
+            font-size: 34px;
+            font-weight: 300;
+            line-height: 1.5;
+            margin-bottom: 2em
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="header-nav">
+        <div class="container">
+            <a href="index.html" class="header-nav__logo">
+                <img src="imagens/logo.svg" alt="Logotipo Silvia Silveira">
+            </a>
+            <button aria-controls="mainMenu" class="header-nav__hamburgger" type="button" aria-expanded="false">
+                <div class="header-nav__hamburggerParties">
+                    <span class="sr-only">Menu</span>
+
+                    <symbol id="icon-menu" viewBox="0 0 32 32">
+                        <title>menu</title>
+                        <path d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path>
+                    </symbol>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                        <title>Menu</title>
+                        <path style="fill: white;" d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path>
+                    </svg>
+
+                </div>
+            </button>
+            <ul class="header-nav__menu" id="mainMenu">
+                <li><a href="portfolio.html">Portifolio</a></li>
+                <li><a href="sobre.html">Sobre mim</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+</body>
